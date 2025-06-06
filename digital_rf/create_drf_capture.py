@@ -46,11 +46,11 @@ def main() -> None:
         "sds_dir", type=Path, help="SDS directory containing Digital RF files"
     )
     parser.add_argument(
-        "--host", default="sds.crc.nd.edu", help="SDS host (default: sds.crc.nd.edu)"
+        "channel",
+        help="Channel to use for the capture.",
     )
     parser.add_argument(
-        "--channel",
-        help="Channel to use for the capture.",
+        "--host", default="sds.crc.nd.edu", help="SDS host (default: sds.crc.nd.edu)"
     )
 
     args = parser.parse_args()
